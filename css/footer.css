@@ -1,0 +1,170 @@
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    padding: 64px 0 24px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    background-color: var(--color-blue-dark);
+}
+
+.footer__main {
+    display: grid;
+    gap: 42px;
+
+    padding-bottom: 48px;
+}
+
+
+/* BRAND */
+
+.footer__brand {
+    max-width: 320px;
+}
+
+.footer__logo {
+    position: relative;
+
+    display: inline-block;
+
+    color: #fff;
+
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.footer__logo::after {
+    position: absolute;
+
+    right: -9px;
+    bottom: 5px;
+
+    width: 7px;
+    height: 7px;
+
+    content: "";
+
+    background-color: var(--color-orange);
+
+    border-radius: 50%;
+}
+
+.footer__description {
+    margin: 18px 0 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* COLUMNS */
+
+.footer__title {
+    margin: 0 0 16px;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__links a {
+    width: fit-content;
+
+    font-size: 14px;
+
+    transition: color var(--transition);
+}
+
+.footer__links a:hover {
+    color: var(--color-orange-light);
+}
+
+
+/* LEGAL */
+
+.footer__legal {
+    max-width: 260px;
+
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* BOTTOM */
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+}
+
+.footer__bottom a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    transition: color var(--transition);
+}
+
+.footer__bottom a:hover {
+    color: var(--color-orange-light);
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .footer {
+        padding-top: 76px;
+    }
+
+    .footer__main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    .footer {
+        padding-top: 90px;
+    }
+
+    .footer__main {
+        grid-template-columns:
+            1.5fr 0.75fr 0.75fr 1fr;
+
+        gap: 56px;
+    }
+}

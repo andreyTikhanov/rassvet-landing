@@ -1,0 +1,146 @@
+/* =========================
+   FINAL CTA
+   ========================= */
+
+.final-cta {
+    overflow: hidden;
+    padding: 72px 0;
+    background-color: var(--color-orange);
+}
+
+.final-cta__container {
+    position: relative;
+}
+
+.final-cta__content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.final-cta__eyebrow {
+    margin: 0 0 14px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.final-cta__title {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.final-cta__description {
+    max-width: 620px;
+
+    margin: 22px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* BUTTON */
+
+.final-cta__button {
+    margin-top: 32px;
+
+    color: #fff;
+    background-color: var(--color-blue);
+
+    box-shadow:
+        0 14px 34px rgba(23, 78, 115, 0.25);
+}
+
+.final-cta__button:hover {
+    background-color: var(--color-blue-dark);
+}
+
+
+/* DECORATION */
+
+.final-cta__sun {
+    position: absolute;
+
+    right: -160px;
+    bottom: -210px;
+
+    width: 420px;
+    height: 420px;
+
+    background-color: rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.final-cta__sun::before {
+    position: absolute;
+
+    top: 70px;
+    left: 70px;
+
+    width: 280px;
+    height: 280px;
+
+    content: "";
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 50%;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .final-cta {
+        padding: 96px 0;
+    }
+
+    .final-cta__description {
+        font-size: 19px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    .final-cta {
+        padding: 120px 0;
+    }
+
+    .final-cta__title {
+        font-size: 68px;
+    }
+
+    .final-cta__sun {
+        right: -80px;
+        bottom: -230px;
+
+        width: 520px;
+        height: 520px;
+    }
+
+    .final-cta__sun::before {
+        top: 90px;
+        left: 90px;
+
+        width: 340px;
+        height: 340px;
+    }
+}

@@ -1,0 +1,149 @@
+/* =========================
+   WHY
+   ========================= */
+
+.why {
+    padding: 72px 0;
+    background-color: var(--color-background);
+}
+
+.why__grid {
+    display: grid;
+    gap: 16px;
+}
+
+.why-card {
+    overflow: hidden;
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.why-card:hover {
+    border-color: var(--color-orange-light);
+    box-shadow: 0 16px 40px rgba(32, 32, 32, 0.07);
+    transform: translateY(-2px);
+}
+
+.why-card[open] {
+    background-color: var(--color-orange-soft);
+    border-color: var(--color-orange-light);
+}
+
+.why-card__summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 16px;
+    padding: 24px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.why-card__summary::-webkit-details-marker {
+    display: none;
+}
+
+.why-card__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--color-orange-hover);
+    background-color: var(--color-orange-soft);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.why-card[open] .why-card__number {
+    color: #fff;
+    background-color: var(--color-orange);
+}
+
+.why-card__title {
+    padding-top: 7px;
+    color: var(--color-blue);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+
+/* PLUS / MINUS */
+
+.why-card__summary::after {
+    width: 32px;
+    height: 32px;
+    content: "";
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    background:
+        linear-gradient(var(--color-blue), var(--color-blue)) center / 12px 2px no-repeat,
+        linear-gradient(var(--color-blue), var(--color-blue)) center / 2px 12px no-repeat;
+
+    transition:
+        background-color var(--transition),
+        border-color var(--transition);
+}
+
+.why-card[open] .why-card__summary::after {
+    background:
+        linear-gradient(#fff, #fff) center / 12px 2px no-repeat,
+        var(--color-blue);
+
+    border-color: var(--color-blue);
+}
+
+.why-card__content {
+    padding: 0 24px 26px 82px;
+}
+
+.why-card__content p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .why {
+        padding: 96px 0;
+    }
+
+    .why__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .why-card__summary {
+        padding: 28px;
+    }
+
+    .why-card__content {
+        padding: 0 28px 30px 86px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    .why {
+        padding: 120px 0;
+    }
+
+    .why-card__title {
+        font-size: 20px;
+    }
+}

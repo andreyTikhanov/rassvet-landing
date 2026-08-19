@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Помоги провести съезд партии Рассвет">
+
+    <title>Рассвет — поддержать съезд</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/why.css">
+    <link rel="stylesheet" href="css/budget.css">
+    <link rel="stylesheet" href="css/how-to.css">
+    <link rel="stylesheet" href="css/donation.css">
+    <link rel="stylesheet" href="css/progress-section.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container header__container">
+
+            <!-- Пока текст вместо настоящего логотипа -->
+            <a class="logo" href="#" aria-label="Рассвет">
+                Рассвет
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation">
+                <a href="#congress">О съезде</a>
+                <a href="#budget">Бюджет</a>
+                <a href="#how-to">Как помочь</a>
+
+                <a class="navigation__donate" href="#donation">
+                    Помочь
+                </a>
+            </nav>
+
+        </div>
+
+        <!-- Прогресс сбора -->
+        <div class="fundraising">
+
+            <div class="container">
+
+                <div class="fundraising__info">
+                    <span>Собрано</span>
+
+                    <strong>
+                        <span id="collectedAmount">0</span>
+                        ₽ из
+                        <span id="targetAmount">1 600 000</span>
+                        ₽
+                    </strong>
+                </div>
+
+                <div class="progress" role="progressbar" aria-label="Прогресс сбора средств" aria-valuemin="0"
+                    aria-valuemax="100" aria-valuenow="0">
+                    <div id="progressBar" class="progress__bar"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="congress">
+
+            <div class="container hero__container">
+
+                <div class="hero__content">
+
+                    <p class="hero__eyebrow">
+                        Третий съезд партии
+                    </p>
+
+                    <h1 class="hero__title">
+                        Помоги провести съезд партии «Рассвет»
+                    </h1>
+
+                    <p class="hero__description">
+                        Нам нужно собрать 1 600 000 рублей,
+                        чтобы провести съезд и продолжить работу
+                        над регистрацией партии.
+                    </p>
+
+                    <div class="hero__actions">
+
+                        <a class="button button--primary" href="#donation">
+                            Пожертвовать сейчас
+                        </a>
+
+                        <a class="hero__secondary-link" href="#about">
+                            Почему это важно
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero__media">
+
+                    <!--
+                        Позже вместо заглушки вставим
+                        YouTube / Vimeo iframe
+                    -->
+                    <div class="video-placeholder">
+
+                        <div class="video-placeholder__play">
+                            ▶
+                        </div>
+
+                        <p>
+                            Здесь будет видеообращение
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- WHY IT MATTERS -->
+        <section class="why" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-heading__eyebrow">
+                        Почему это важно
+                    </p>
+
+                    <h2 class="section-heading__title">
+                        Зачем нужен съезд?
+                    </h2>
+
+                    <p class="section-heading__description">
+                        Четыре главных вопроса о съезде,
+                        его целях и о том, почему сейчас нужна поддержка.
+                    </p>
+                </div>
+
+
+                <div class="why__grid">
+
+                    <!-- CARD 1 -->
+                    <details class="why-card">
+                        <summary class="why-card__summary">
+
+                            <span class="why-card__number">
+                                01
+                            </span>
+
+                            <span class="why-card__title">
+                                Что сейчас происходит и почему это важно?
+                            </span>
+
+                        </summary>
+
+                        <div class="why-card__content">
+                            <p>
+                                Партия «Рассвет» готовится провести свой
+                                третий съезд. Мы не оставляем попыток
+                                действовать в российском правовом поле.
+                                Это гарантирует относительную безопасность
+                                и легальность.
+                            </p>
+                        </div>
+                    </details>
+
+
+                    <!-- CARD 2 -->
+                    <details class="why-card">
+                        <summary class="why-card__summary">
+
+                            <span class="why-card__number">
+                                02
+                            </span>
+
+                            <span class="why-card__title">
+                                Какую проблему решит проведение съезда?
+                            </span>
+
+                        </summary>
+
+                        <div class="why-card__content">
+                            <p>
+                                Съезд позволит актуализировать и расширить
+                                количество региональных отделений,
+                                принять программу и устав партии,
+                                избрать руководящие органы.
+                            </p>
+                        </div>
+                    </details>
+
+
+                    <!-- CARD 3 -->
+                    <details class="why-card">
+                        <summary class="why-card__summary">
+
+                            <span class="why-card__number">
+                                03
+                            </span>
+
+                            <span class="why-card__title">
+                                Что изменится благодаря пожертвованиям?
+                            </span>
+
+                        </summary>
+
+                        <div class="why-card__content">
+                            <p>
+                                У «Рассвета» появится шанс стать
+                                зарегистрированной политической партией.
+                                Вы сможете получить своего представителя
+                                на российском политическом поле.
+                            </p>
+                        </div>
+                    </details>
+
+
+                    <!-- CARD 4 -->
+                    <details class="why-card">
+                        <summary class="why-card__summary">
+
+                            <span class="why-card__number">
+                                04
+                            </span>
+
+                            <span class="why-card__title">
+                                Почему доверять «Рассвету»?
+                            </span>
+
+                        </summary>
+
+                        <div class="why-card__content">
+                            <p>
+                                В условиях, когда практически все
+                                оппозиционные партии убраны с политической
+                                карты, «Рассвет» и «Яблоко» представляют
+                                интересы миролюбивых, свободно мыслящих
+                                граждан.
+                            </p>
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- BUDGET -->
+        <section class="budget" id="budget">
+            <div class="container budget__container">
+
+                <div class="budget__intro">
+
+                    <p class="section-heading__eyebrow">
+                        Прозрачность
+                    </p>
+
+                    <h2 class="section-heading__title">
+                        На что нужны средства?
+                    </h2>
+
+                    <p class="budget__description">
+                        Проведение съезда требует организационных расходов.
+                        Мы показываем основные статьи бюджета, чтобы было
+                        понятно, на что направляются собранные средства.
+                    </p>
+
+                    <div class="budget__total">
+                        <span class="budget__total-label">
+                            Общий бюджет съезда
+                        </span>
+
+                        <strong class="budget__total-value">
+                            1 600 000 ₽
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="budget__items">
+
+                    <!-- ITEM 1 -->
+                    <article class="budget-item">
+
+                        <div class="budget-item__icon" aria-hidden="true">
+                            <span>01</span>
+                        </div>
+
+                        <div class="budget-item__content">
+                            <h3>
+                                Аренда помещения
+                            </h3>
+
+                            <p>
+                                Помещение для проведения съезда
+                                в соответствии с организационными требованиями.
+                            </p>
+                        </div>
+
+                        <span class="budget-item__price">
+                            Сумма уточняется
+                        </span>
+
+                    </article>
+
+
+                    <!-- ITEM 2 -->
+                    <article class="budget-item">
+
+                        <div class="budget-item__icon" aria-hidden="true">
+                            <span>02</span>
+                        </div>
+
+                        <div class="budget-item__content">
+                            <h3>
+                                Дорога делегатов
+                            </h3>
+
+                            <p>
+                                Транспортные расходы для участников,
+                                приезжающих из регионов.
+                            </p>
+                        </div>
+
+                        <span class="budget-item__price">
+                            Сумма уточняется
+                        </span>
+
+                    </article>
+
+
+                    <!-- ITEM 3 -->
+                    <article class="budget-item">
+
+                        <div class="budget-item__icon" aria-hidden="true">
+                            <span>03</span>
+                        </div>
+
+                        <div class="budget-item__content">
+                            <h3>
+                                Проживание и питание
+                            </h3>
+
+                            <p>
+                                Проживание и питание делегатов
+                                в течение двух дней проведения съезда.
+                            </p>
+                        </div>
+
+                        <span class="budget-item__price">
+                            Сумма уточняется
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- HOW TO HELP -->
+        <section class="how-to" id="how-to">
+            <div class="container">
+
+                <div class="section-heading how-to__heading">
+                    <p class="section-heading__eyebrow">
+                        Всё просто
+                    </p>
+
+                    <h2 class="section-heading__title">
+                        Как помочь?
+                    </h2>
+
+                    <p class="section-heading__description">
+                        Поддержать проведение съезда можно всего за несколько шагов.
+                    </p>
+                </div>
+
+
+                <div class="how-to__steps">
+
+                    <!-- STEP 1 -->
+                    <article class="how-step">
+                        <div class="how-step__top">
+                            <span class="how-step__number">
+                                01
+                            </span>
+
+                            <span class="how-step__line"></span>
+                        </div>
+
+                        <h3 class="how-step__title">
+                            Выберите сумму
+                        </h3>
+
+                        <p class="how-step__description">
+                            Выберите один из предложенных вариантов
+                            или укажите удобную сумму самостоятельно.
+                        </p>
+                    </article>
+
+
+                    <!-- STEP 2 -->
+                    <article class="how-step">
+                        <div class="how-step__top">
+                            <span class="how-step__number">
+                                02
+                            </span>
+
+                            <span class="how-step__line"></span>
+                        </div>
+
+                        <h3 class="how-step__title">
+                            Заполните форму
+                        </h3>
+
+                        <p class="how-step__description">
+                            Укажите необходимые контактные данные
+                            для проведения платежа и получения подтверждения.
+                        </p>
+                    </article>
+
+
+                    <!-- STEP 3 -->
+                    <article class="how-step">
+                        <div class="how-step__top">
+                            <span class="how-step__number">
+                                03
+                            </span>
+
+                            <span class="how-step__line"></span>
+                        </div>
+
+                        <h3 class="how-step__title">
+                            Оплатите
+                        </h3>
+
+                        <p class="how-step__description">
+                            Выберите удобный способ оплаты:
+                            банковскую карту, ЮMoney или СБП.
+                        </p>
+                    </article>
+
+
+                    <!-- STEP 4 -->
+                    <article class="how-step">
+                        <div class="how-step__top">
+                            <span class="how-step__number">
+                                04
+                            </span>
+                        </div>
+
+                        <h3 class="how-step__title">
+                            Получите подтверждение
+                        </h3>
+
+                        <p class="how-step__description">
+                            После успешной оплаты вы получите
+                            подтверждение и благодарственное письмо.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- DONATION -->
+        <section class="donation" id="donation">
+            <div class="container donation__container">
+
+                <div class="donation__intro">
+
+                    <p class="section-heading__eyebrow">
+                        Поддержать
+                    </p>
+
+                    <h2 class="section-heading__title">
+                        Внеси свой вклад в будущее
+                    </h2>
+
+                    <p class="donation__description">
+                        Выберите удобную сумму и способ оплаты.
+                        Платёжная интеграция будет подключена после
+                        получения настроек платёжного сервиса.
+                    </p>
+
+                    <div class="donation__note">
+                        <span class="donation__note-icon" aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <p>
+                            Сейчас форма работает в демонстрационном режиме
+                            и не выполняет реальных платежей.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form class="donation-form" id="donationForm">
+
+                    <!-- AMOUNT -->
+                    <fieldset class="form-section">
+                        <legend class="form-section__title">
+                            1. Выберите сумму
+                        </legend>
+
+                        <div class="amount-options">
+
+                            <label class="amount-option">
+                                <input type="radio" name="amount" value="100">
+                                <span>100 ₽</span>
+                            </label>
+
+                            <label class="amount-option">
+                                <input type="radio" name="amount" value="300">
+                                <span>300 ₽</span>
+                            </label>
+
+                            <label class="amount-option">
+                                <input type="radio" name="amount" value="500">
+                                <span>500 ₽</span>
+                            </label>
+
+                            <label class="amount-option">
+                                <input type="radio" name="amount" value="1000">
+                                <span>1 000 ₽</span>
+                            </label>
+
+                        </div>
+
+                        <label class="form-field">
+                            <span class="form-field__label">
+                                Своя сумма
+                            </span>
+
+                            <div class="amount-input">
+                                <input id="customAmount" type="number" min="1" step="1" inputmode="numeric"
+                                    placeholder="Введите сумму">
+
+                                <span>₽</span>
+                            </div>
+                        </label>
+
+                        <p class="form-error" id="amountError" hidden>
+                            Выберите или укажите сумму пожертвования.
+                        </p>
+
+                    </fieldset>
+
+
+                    <!-- PAYMENT -->
+                    <fieldset class="form-section">
+                        <legend class="form-section__title">
+                            2. Способ оплаты
+                        </legend>
+
+                        <div class="payment-options">
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="card" required checked>
+
+                                <span class="payment-option__content">
+                                    <strong>Банковская карта</strong>
+                                    <small>Visa / Mastercard / МИР</small>
+                                </span>
+                            </label>
+
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="yoomoney" required>
+
+                                <span class="payment-option__content">
+                                    <strong>ЮMoney</strong>
+                                    <small>Оплата через ЮMoney</small>
+                                </span>
+                            </label>
+
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="sbp" required>
+
+                                <span class="payment-option__content">
+                                    <strong>СБП</strong>
+                                    <small>Система быстрых платежей</small>
+                                </span>
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- PERSONAL DATA -->
+                    <fieldset class="form-section">
+                        <legend class="form-section__title">
+                            3. Ваши данные
+                        </legend>
+
+                        <div class="form-grid">
+
+                            <label class="form-field">
+                                <span class="form-field__label">
+                                    ФИО
+                                    <span class="form-field__optional">
+                                        необязательно
+                                    </span>
+                                </span>
+
+                                <input type="text" name="fullName" autocomplete="name" placeholder="Иван Иванов">
+                            </label>
+
+
+                            <label class="form-field">
+                                <span class="form-field__label">
+                                    Дата рождения
+                                </span>
+
+                                <input type="date" name="birthDate">
+                            </label>
+
+
+                            <label class="form-field">
+                                <span class="form-field__label">
+                                    Email *
+                                </span>
+
+                                <input type="email" name="email" autocomplete="email" placeholder="mail@example.com"
+                                    required>
+                            </label>
+
+
+                            <label class="form-field">
+                                <span class="form-field__label">
+                                    Телефон
+                                    <span class="form-field__optional">
+                                        необязательно
+                                    </span>
+                                </span>
+
+                                <input type="tel" name="phone" autocomplete="tel" placeholder="+7 999 000-00-00">
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- CONSENTS -->
+                    <div class="form-consents">
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="personalDataConsent" required>
+
+                            <span>
+                                Я даю согласие на обработку персональных данных.
+                                <a href="privacy.html" target="_blank" rel="noopener">
+                                    Политика обработки персональных данных
+                                </a>
+                            </span>
+                        </label>
+
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="newsletter">
+
+                            <span>
+                                Хочу получать новости о кампании
+                            </span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button class="button button--primary donation-form__submit" type="submit">
+                        Поддержать
+                    </button>
+
+
+                    <div class="donation-form__security">
+                        <span class="donation-form__lock" aria-hidden="true">
+                            🔒
+                        </span>
+
+                        <div>
+                            <strong>
+                                Безопасная оплата
+                            </strong>
+
+                            <p>
+                                Платёжные данные будут обрабатываться
+                                платёжным сервисом после подключения интеграции.
+                            </p>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+        <!-- FUNDRAISING PROGRESS -->
+        <section class="fundraising-progress" id="progress">
+            <div class="container">
+
+                <div class="fundraising-progress__header">
+
+                    <div>
+                        <p class="section-heading__eyebrow">
+                            Вместе к цели
+                        </p>
+
+                        <h2 class="section-heading__title">
+                            Каждый вклад приближает съезд
+                        </h2>
+                    </div>
+
+                    <div class="fundraising-progress__percent">
+                        <strong id="progressPercent">
+                            0%
+                        </strong>
+
+                        <span>
+                            от цели
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="fundraising-progress__card">
+
+                    <div class="fundraising-progress__amounts">
+
+                        <div class="fundraising-progress__collected">
+                            <span>
+                                Уже собрано
+                            </span>
+
+                            <strong>
+                                <span id="bigCollectedAmount">0</span>
+                                ₽
+                            </strong>
+                        </div>
+
+
+                        <div class="fundraising-progress__target">
+                            <span>
+                                Наша цель
+                            </span>
+
+                            <strong>
+                                <span id="bigTargetAmount">1 600 000</span>
+                                ₽
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="fundraising-progress__bar" id="bigProgress" role="progressbar"
+                        aria-label="Общий прогресс сбора средств" aria-valuemin="0" aria-valuemax="100"
+                        aria-valuenow="0">
+                        <div class="fundraising-progress__bar-value" id="bigProgressBar"></div>
+                    </div>
+
+
+                    <div class="fundraising-progress__footer">
+
+                        <div class="donors">
+
+                            <div class="donors__icon" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="donors__text">
+                                <strong>
+                                    Нас уже
+                                    <span id="donorCount">0</span>
+                                    человек
+                                </strong>
+
+                                <span>
+                                    Спасибо каждому, кто поддержал кампанию
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <a class="button button--primary" href="#donation">
+                            Присоединиться
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <div class="container final-cta__container">
+
+                <div class="final-cta__content">
+
+                    <p class="final-cta__eyebrow">
+                        Сделайте шаг сейчас
+                    </p>
+
+                    <h2 class="final-cta__title">
+                        Не откладывай будущее на завтра
+                    </h2>
+
+                    <p class="final-cta__description">
+                        Каждый вклад приближает проведение съезда.
+                        Поддержите кампанию и помогите сделать следующий шаг.
+                    </p>
+
+                    <a class="button final-cta__button" href="#donation">
+                        Помочь сейчас
+                    </a>
+
+                </div>
+
+                <div class="final-cta__sun" aria-hidden="true"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__main">
+
+                <div class="footer__brand">
+
+                    <a class="footer__logo" href="#congress" aria-label="Рассвет — наверх">
+                        Рассвет
+                    </a>
+
+                    <p class="footer__description">
+                        Информационная страница кампании
+                        по проведению съезда партии.
+                    </p>
+
+                </div>
+
+
+                <div class="footer__column">
+
+                    <h3 class="footer__title">
+                        Навигация
+                    </h3>
+
+                    <nav class="footer__links">
+                        <a href="#about">
+                            Почему это важно
+                        </a>
+
+                        <a href="#budget">
+                            Бюджет
+                        </a>
+
+                        <a href="#how-to">
+                            Как помочь
+                        </a>
+
+                        <a href="#donation">
+                            Поддержать
+                        </a>
+                    </nav>
+
+                </div>
+
+
+                <div class="footer__column">
+
+                    <h3 class="footer__title">
+                        Мы в сети
+                    </h3>
+
+                    <div class="footer__links">
+                        <a href="#" target="_blank" rel="noopener">
+                            Официальный сайт
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener">
+                            Telegram
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener">
+                            YouTube
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer__column">
+
+                    <h3 class="footer__title">
+                        Документы
+                    </h3>
+
+                    <div class="footer__links">
+                        <a href="privacy.html">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+
+                    <p class="footer__legal">
+                        ИНН / ОГРН будут добавлены
+                        после предоставления данных заказчиком.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer__bottom">
+
+                <span>
+                    © 2026 Партия «Рассвет»
+                </span>
+
+                <a href="#congress">
+                    Наверх ↑
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

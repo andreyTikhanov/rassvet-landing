@@ -1,0 +1,406 @@
+/* =========================
+   DONATION
+   ========================= */
+
+.donation {
+    padding: 72px 0;
+    background:
+        linear-gradient(135deg,
+            #fff 0%,
+            var(--color-orange-soft) 100%);
+}
+
+.donation__container {
+    display: grid;
+    gap: 44px;
+}
+
+.donation__intro {
+    max-width: 580px;
+}
+
+.donation__description {
+    margin: 22px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* NOTE */
+
+.donation__note {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+.donation__note-icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.donation__note p {
+    margin: 3px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* FORM */
+
+.donation-form {
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 24px 70px rgba(32, 32, 32, 0.08);
+}
+
+.form-section {
+    margin: 0;
+    padding: 0 0 30px;
+    border: 0;
+}
+
+.form-section+.form-section {
+    padding-top: 30px;
+    border-top: 1px solid var(--color-border);
+}
+
+.form-section__title {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    color: var(--color-blue);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+/* AMOUNTS */
+
+.amount-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.amount-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.amount-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.amount-option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 12px;
+    color: var(--color-blue);
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    font-weight: 800;
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.amount-option:hover span {
+    border-color: var(--color-orange-light);
+    transform: translateY(-1px);
+}
+
+.amount-option input:checked+span {
+    color: #fff;
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+
+/* FIELDS */
+
+.form-field {
+    display: block;
+}
+
+.form-field__label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-blue-dark);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-field__optional {
+    margin-left: 5px;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-field input {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    color: var(--color-text);
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    outline: none;
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.form-field input:focus {
+    border-color: var(--color-orange);
+    box-shadow: 0 0 0 3px rgba(233, 149, 99, 0.14);
+}
+
+
+/* CUSTOM AMOUNT */
+
+.amount-input {
+    position: relative;
+}
+
+.amount-input input {
+    padding-right: 48px;
+}
+
+.amount-input>span {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: var(--color-text-secondary);
+    font-weight: 700;
+    transform: translateY(-50%);
+}
+
+
+/* Remove number arrows */
+
+.amount-input input::-webkit-outer-spin-button,
+.amount-input input::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+.amount-input input[type="number"] {
+    appearance: textfield;
+}
+
+
+/* ERROR */
+
+.form-error {
+    margin: 10px 0 0;
+    color: #B44232;
+    font-size: 13px;
+}
+
+
+/* PAYMENT */
+
+.payment-options {
+    display: grid;
+    gap: 10px;
+}
+
+.payment-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.payment-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.payment-option__content {
+    display: block;
+    padding: 16px 18px;
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    transition:
+        background-color var(--transition),
+        border-color var(--transition);
+}
+
+.payment-option__content strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--color-blue);
+    font-size: 15px;
+}
+
+.payment-option__content small {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.payment-option input:checked+.payment-option__content {
+    background-color: var(--color-orange-soft);
+    border-color: var(--color-orange);
+}
+
+
+/* PERSONAL DATA GRID */
+
+.form-grid {
+    display: grid;
+    gap: 18px;
+}
+
+
+/* CHECKBOXES */
+
+.form-consents {
+    display: grid;
+    gap: 14px;
+    padding: 26px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox input {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--color-orange);
+}
+
+
+/* SUBMIT */
+
+.donation-form__submit {
+    width: 100%;
+    min-height: 56px;
+    font-size: 16px;
+}
+
+
+/* SECURITY */
+
+.donation-form__security {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.donation-form__lock {
+    font-size: 20px;
+}
+
+.donation-form__security strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--color-blue);
+    font-size: 13px;
+}
+
+.donation-form__security p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .donation {
+        padding: 96px 0;
+    }
+
+    .amount-options {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .donation-form {
+        padding: 34px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    .donation {
+        padding: 120px 0;
+    }
+
+    .donation__container {
+        grid-template-columns: 0.75fr 1.25fr;
+        align-items: start;
+        gap: 80px;
+    }
+
+    .donation__intro {
+        position: sticky;
+        top: 160px;
+    }
+
+    .donation-form {
+        padding: 40px;
+    }
+}
+
+.checkbox a {
+    color: var(--color-blue);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.checkbox a:hover {
+    color: var(--color-orange-hover);
+}
