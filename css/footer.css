@@ -163,7 +163,7 @@
 
     .footer__main {
         grid-template-columns:
-            1.5fr 0.75fr 0.75fr 1fr;
+            1.5fr 0.75fr 0.75fr;
 
         gap: 56px;
     }

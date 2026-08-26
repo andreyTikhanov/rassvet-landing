@@ -11,50 +11,43 @@
     margin-bottom: 42px;
 }
 
-
-/* =========================
-   STEPS
-   ========================= */
-
 .how-to__steps {
     display: grid;
     gap: 18px;
 }
 
 
-/* =========================
-   STEP
-   ========================= */
+/* STEP */
 
 .how-step {
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
     padding: 24px;
+
     background-color: var(--color-background-secondary);
+
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
 
     transition:
-        transform var(--transition),
         border-color var(--transition),
+        transform var(--transition),
         box-shadow var(--transition);
 }
 
 .how-step:hover {
     border-color: var(--color-orange-light);
-    box-shadow: 0 16px 40px rgba(32, 32, 32, 0.06);
+
+    box-shadow:
+        0 16px 40px rgba(32, 32, 32, 0.06);
+
     transform: translateY(-2px);
 }
 
 
-/* =========================
-   NUMBER / LINE
-   ========================= */
-
-.how-step__top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 22px;
-}
+/* NUMBER */
 
 .how-step__number {
     display: flex;
@@ -74,17 +67,15 @@
     font-weight: 800;
 }
 
-.how-step__line {
-    display: none;
+
+/* CONTENT */
+
+.how-step__content {
+    padding-top: 3px;
 }
 
-
-/* =========================
-   TEXT
-   ========================= */
-
 .how-step__title {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
 
     color: var(--color-blue);
 
@@ -102,9 +93,7 @@
 }
 
 
-/* =========================
-   TABLET
-   ========================= */
+/* TABLET */
 
 @media (min-width: 768px) {
     .how-to {
@@ -112,7 +101,9 @@
     }
 
     .how-to__steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 20px;
     }
 
@@ -122,9 +113,7 @@
 }
 
 
-/* =========================
-   DESKTOP
-   ========================= */
+/* DESKTOP */
 
 @media (min-width: 1024px) {
     .how-to {
@@ -132,41 +121,19 @@
     }
 
     .how-to__steps {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .how-step {
-        padding: 28px 26px;
-        background-color: transparent;
-        border: 0;
-        border-radius: 0;
+        padding: 34px;
     }
 
-    .how-step:hover {
-        box-shadow: none;
-        transform: none;
-    }
-
-    .how-step__top {
-        margin-bottom: 28px;
-    }
-
-    .how-step__line {
-        display: block;
-        flex: 1;
-
-        height: 2px;
-
-        margin-left: 14px;
-
-        background:
-            linear-gradient(90deg,
-                var(--color-orange-light),
-                var(--color-border));
+    .how-step__number {
+        width: 54px;
+        height: 54px;
     }
 
     .how-step__title {
-        font-size: 21px;
+        font-size: 22px;
     }
 }

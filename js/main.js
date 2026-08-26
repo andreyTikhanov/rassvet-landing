@@ -34,9 +34,8 @@ navigationLinks.forEach((link) => {
 // ========================================
 
 const fundraising = {
-    collected: 624500,
-    target: 1600000,
-    donors: 418
+    collected: 65600,
+    target: 1600000
 };
 
 const collectedAmountElement =
@@ -150,78 +149,78 @@ function updateFundraisingProgress() {
 updateFundraisingProgress();
 
 // ========================================
-// DONATION FORM
+// COPY PAYMENT REQUISITES
 // ========================================
 
-const donationForm = document.querySelector('#donationForm');
+const copyRequisitesButton =
+    document.querySelector('#copyRequisites');
 
-const amountRadios = document.querySelectorAll(
-    'input[name="amount"]'
-);
+const copyRequisitesStatus =
+    document.querySelector('#copyRequisitesStatus');
 
-const customAmount =
-    document.querySelector('#customAmount');
-
-const amountError =
-    document.querySelector('#amountError');
+const requisites =
+    document.querySelectorAll('.requisites__row');
 
 
-function hideAmountError() {
-    if (amountError) {
-        amountError.hidden = true;
-    }
+function getRequisitesText() {
+    return Array.from(requisites)
+        .map((row) => {
+            const label =
+                row.querySelector('dt')
+                    ?.textContent
+                    .trim();
+
+            const value =
+                row.querySelector('dd')
+                    ?.textContent
+                    .trim();
+
+            return `${label}: ${value}`;
+        })
+        .join('\n');
 }
 
 
-amountRadios.forEach((radio) => {
-    radio.addEventListener('change', () => {
-        if (radio.checked && customAmount) {
-            customAmount.value = radio.value;
+copyRequisitesButton?.addEventListener(
+    'click',
+    async () => {
+
+        const text =
+            getRequisitesText();
+
+        try {
+            await navigator.clipboard.writeText(text);
+
+            if (copyRequisitesStatus) {
+                copyRequisitesStatus.textContent =
+                    'Реквизиты скопированы';
+            }
+
+            copyRequisitesButton.textContent =
+                'Скопировано ✓';
+
+
+            setTimeout(() => {
+                copyRequisitesButton.textContent =
+                    'Скопировать реквизиты';
+
+                if (copyRequisitesStatus) {
+                    copyRequisitesStatus.textContent =
+                        '';
+                }
+            }, 2500);
+
+        } catch (error) {
+
+            if (copyRequisitesStatus) {
+                copyRequisitesStatus.textContent =
+                    'Не удалось скопировать реквизиты';
+            }
+
+            console.error(
+                'Clipboard error:',
+                error
+            );
         }
-
-        hideAmountError();
-    });
-});
-
-
-customAmount?.addEventListener('input', () => {
-    const value = customAmount.value.trim();
-
-    amountRadios.forEach((radio) => {
-        radio.checked =
-            value !== '' &&
-            radio.value === value;
-    });
-
-    hideAmountError();
-});
-
-donationForm?.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const selectedAmount =
-        document.querySelector(
-            'input[name="amount"]:checked'
-        );
-
-    const customValue =
-        Number(customAmount?.value || 0);
-
-    if (!selectedAmount && customValue <= 0) {
-        if (amountError) {
-            amountError.hidden = false;
-        }
-
-        customAmount?.focus();
-
-        return;
     }
-
-    /*
-     * TODO:
-     * Здесь позже будет запрос к PHP backend
-     * и создание платежа.
-     */
-
-    console.log('Форма прошла frontend-проверку');
-});
+);

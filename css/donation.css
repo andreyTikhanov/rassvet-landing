@@ -4,6 +4,7 @@
 
 .donation {
     padding: 72px 0;
+
     background:
         linear-gradient(135deg,
             #fff 0%,
@@ -21,21 +22,28 @@
 
 .donation__description {
     margin: 22px 0 0;
+
     color: var(--color-text-secondary);
+
     font-size: 17px;
     line-height: 1.7;
 }
 
 
-/* NOTE */
+/* =========================
+   NOTE
+   ========================= */
 
 .donation__note {
     display: flex;
     align-items: flex-start;
     gap: 14px;
+
     margin-top: 30px;
     padding: 18px;
+
     background-color: #fff;
+
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
 }
@@ -45,333 +53,263 @@
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
+
     width: 30px;
     height: 30px;
+
     color: #fff;
     background-color: var(--color-orange);
+
     border-radius: 50%;
-    font-size: 14px;
+
+    font-size: 15px;
     font-weight: 800;
 }
 
 .donation__note p {
     margin: 3px 0 0;
+
     color: var(--color-text-secondary);
+
     font-size: 14px;
     line-height: 1.6;
 }
 
 
-/* FORM */
+/* =========================
+   REQUISITES CARD
+   ========================= */
 
-.donation-form {
+.requisites-card {
     padding: 24px;
+
     background-color: #fff;
+
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-large);
-    box-shadow: 0 24px 70px rgba(32, 32, 32, 0.08);
+
+    box-shadow:
+        0 24px 70px rgba(32, 32, 32, 0.08);
 }
 
-.form-section {
-    margin: 0;
-    padding: 0 0 30px;
-    border: 0;
+.requisites-card__header {
+    margin-bottom: 26px;
 }
 
-.form-section+.form-section {
-    padding-top: 30px;
-    border-top: 1px solid var(--color-border);
-}
-
-.form-section__title {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0;
-    color: var(--color-blue);
-    font-size: 19px;
-    font-weight: 800;
-}
-
-
-/* AMOUNTS */
-
-.amount-options {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-bottom: 18px;
-}
-
-.amount-option {
-    position: relative;
-    cursor: pointer;
-}
-
-.amount-option input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-}
-
-.amount-option span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    padding: 12px;
-    color: var(--color-blue);
-    background-color: var(--color-background-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-small);
-    font-weight: 800;
-    transition:
-        color var(--transition),
-        background-color var(--transition),
-        border-color var(--transition),
-        transform var(--transition);
-}
-
-.amount-option:hover span {
-    border-color: var(--color-orange-light);
-    transform: translateY(-1px);
-}
-
-.amount-option input:checked+span {
-    color: #fff;
-    background-color: var(--color-orange);
-    border-color: var(--color-orange);
-}
-
-
-/* FIELDS */
-
-.form-field {
+.requisites-card__label {
     display: block;
-}
 
-.form-field__label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--color-blue-dark);
-    font-size: 14px;
-    font-weight: 700;
-}
+    margin-bottom: 6px;
 
-.form-field__optional {
-    margin-left: 5px;
-    color: var(--color-text-secondary);
+    color: var(--color-orange-hover);
+
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
 }
 
-.form-field input {
-    width: 100%;
-    min-height: 50px;
-    padding: 12px 14px;
-    color: var(--color-text);
-    background-color: #fff;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-small);
-    outline: none;
-    transition:
-        border-color var(--transition),
-        box-shadow var(--transition);
-}
-
-.form-field input:focus {
-    border-color: var(--color-orange);
-    box-shadow: 0 0 0 3px rgba(233, 149, 99, 0.14);
-}
-
-
-/* CUSTOM AMOUNT */
-
-.amount-input {
-    position: relative;
-}
-
-.amount-input input {
-    padding-right: 48px;
-}
-
-.amount-input>span {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    color: var(--color-text-secondary);
-    font-weight: 700;
-    transform: translateY(-50%);
-}
-
-
-/* Remove number arrows */
-
-.amount-input input::-webkit-outer-spin-button,
-.amount-input input::-webkit-inner-spin-button {
+.requisites-card__header h3 {
     margin: 0;
-    appearance: none;
-}
 
-.amount-input input[type="number"] {
-    appearance: textfield;
-}
-
-
-/* ERROR */
-
-.form-error {
-    margin: 10px 0 0;
-    color: #B44232;
-    font-size: 13px;
-}
-
-
-/* PAYMENT */
-
-.payment-options {
-    display: grid;
-    gap: 10px;
-}
-
-.payment-option {
-    position: relative;
-    cursor: pointer;
-}
-
-.payment-option input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-}
-
-.payment-option__content {
-    display: block;
-    padding: 16px 18px;
-    background-color: var(--color-background-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-small);
-    transition:
-        background-color var(--transition),
-        border-color var(--transition);
-}
-
-.payment-option__content strong {
-    display: block;
-    margin-bottom: 3px;
     color: var(--color-blue);
-    font-size: 15px;
+
+    font-size: 26px;
 }
 
-.payment-option__content small {
+
+/* =========================
+   REQUISITES
+   ========================= */
+
+.requisites {
+    margin: 0;
+}
+
+.requisites__row {
+    display: grid;
+    gap: 6px;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid var(--color-border);
+}
+
+.requisites__row:first-child {
+    padding-top: 0;
+}
+
+.requisites__row dt {
     color: var(--color-text-secondary);
+
     font-size: 13px;
+    font-weight: 600;
 }
 
-.payment-option input:checked+.payment-option__content {
+.requisites__row dd {
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* IMPORTANT PAYMENT PURPOSE */
+
+.requisites__row--important {
+    margin-top: 16px;
+    padding: 16px;
+
     background-color: var(--color-orange-soft);
-    border-color: var(--color-orange);
+
+    border: 1px solid var(--color-orange-light);
+    border-radius: var(--border-radius-small);
 }
 
-
-/* PERSONAL DATA GRID */
-
-.form-grid {
-    display: grid;
-    gap: 18px;
+.requisites__row--important dt {
+    color: var(--color-orange-hover);
 }
 
+/* =========================
+   PAYMENT INSTRUCTION
+   ========================= */
 
-/* CHECKBOXES */
+.payment-instruction {
+    margin-top: 30px;
+    padding-top: 28px;
 
-.form-consents {
-    display: grid;
-    gap: 14px;
-    padding: 26px 0;
     border-top: 1px solid var(--color-border);
 }
 
-.checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: var(--color-text-secondary);
-    font-size: 14px;
-    line-height: 1.5;
-    cursor: pointer;
-}
+.payment-instruction__title {
+    margin: 0 0 20px;
 
-.checkbox input {
-    flex: 0 0 auto;
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    accent-color: var(--color-orange);
-}
+    color: var(--color-blue);
 
-
-/* SUBMIT */
-
-.donation-form__submit {
-    width: 100%;
-    min-height: 56px;
-    font-size: 16px;
-}
-
-
-/* SECURITY */
-
-.donation-form__security {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid var(--color-border);
-}
-
-.donation-form__lock {
     font-size: 20px;
 }
 
-.donation-form__security strong {
-    display: block;
-    margin-bottom: 3px;
-    color: var(--color-blue);
-    font-size: 13px;
-}
+.payment-instruction__list {
+    display: grid;
+    gap: 16px;
 
-.donation-form__security p {
     margin: 0;
+    padding-left: 24px;
+}
+
+.payment-instruction__list li {
+    padding-left: 5px;
+
     color: var(--color-text-secondary);
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.payment-instruction__list li::marker {
+    color: var(--color-orange);
+    font-weight: 800;
+}
+
+.payment-instruction__list strong {
+    color: var(--color-blue-dark);
+}
+
+.payment-instruction__example {
+    display: grid;
+    gap: 8px;
+
+    margin-top: 24px;
+    padding: 18px;
+
+    background-color: var(--color-orange-soft);
+
+    border: 1px solid var(--color-orange-light);
+    border-radius: var(--border-radius-small);
+}
+
+.payment-instruction__example span {
+    color: var(--color-orange-hover);
+
     font-size: 12px;
-    line-height: 1.5;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.payment-instruction__example strong {
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.payment-instruction__note {
+    margin: 18px 0 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* =========================
+   COPY BUTTON
+   ========================= */
+
+.requisites-card__copy {
+    width: 100%;
+
+    margin-top: 26px;
+}
+
+.requisites-card__status {
+    min-height: 20px;
+
+    margin: 10px 0 0;
+
+    color: var(--color-blue);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+   ========================= */
 
 @media (min-width: 768px) {
     .donation {
         padding: 96px 0;
     }
 
-    .amount-options {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .form-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .donation-form {
+    .requisites-card {
         padding: 34px;
+    }
+
+    .requisites__row {
+        grid-template-columns:
+            180px minmax(0, 1fr);
+
+        align-items: baseline;
+
+        gap: 20px;
     }
 }
 
 
-/* DESKTOP */
+/* =========================
+   DESKTOP
+   ========================= */
 
 @media (min-width: 1024px) {
     .donation {
@@ -379,8 +317,11 @@
     }
 
     .donation__container {
-        grid-template-columns: 0.75fr 1.25fr;
+        grid-template-columns:
+            0.75fr 1.25fr;
+
         align-items: start;
+
         gap: 80px;
     }
 
@@ -389,18 +330,7 @@
         top: 160px;
     }
 
-    .donation-form {
+    .requisites-card {
         padding: 40px;
     }
-}
-
-.checkbox a {
-    color: var(--color-blue);
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.checkbox a:hover {
-    color: var(--color-orange-hover);
 }
