@@ -130,86 +130,29 @@
 
 .hero__media {
     width: 100%;
+    min-width: 0;
 }
 
 
 /* VIDEO */
 
-.video-placeholder {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    min-height: 280px;
-    padding: 32px;
-    color: #fff;
-    text-align: center;
+.hero-video {
+    display: block;
 
-    background: linear-gradient(150deg,
-            var(--color-orange),
-            #E99A68 38%,
-            var(--color-blue));
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    background-color: var(--color-blue-dark);
 
     border-radius: var(--border-radius-large);
-    box-shadow: 0 30px 70px rgba(31, 58, 75, 0.20);
-}
 
-.video-placeholder::before,
-.video-placeholder::after {
-    position: absolute;
-    content: "";
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 50%;
-}
+    box-shadow:
+        0 30px 70px rgba(31, 58, 75, 0.20);
 
-.video-placeholder::before {
-    top: -120px;
-    right: -80px;
-    width: 300px;
-    height: 300px;
+    object-fit: cover;
 }
-
-.video-placeholder::after {
-    bottom: -160px;
-    left: -100px;
-    width: 320px;
-    height: 320px;
-}
-
-.video-placeholder p {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    font-weight: 600;
-}
-
-.video-placeholder__play {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 76px;
-    height: 76px;
-    margin-bottom: 20px;
-    padding-left: 5px;
-    color: var(--color-blue);
-    background-color: #fff;
-    border-radius: 50%;
-    font-size: 28px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
-}
-
-.video-placeholder:hover .video-placeholder__play {
-    transform: scale(1.06);
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.20);
-}
-
 
 /* TABLET */
 
@@ -230,10 +173,6 @@
         flex-direction: row;
         align-items: center;
     }
-
-    .video-placeholder {
-        min-height: 380px;
-    }
 }
 
 
@@ -246,17 +185,14 @@
 
     .hero__container {
         grid-template-columns:
-            minmax(0, 1fr) minmax(420px, 0.9fr);
+            minmax(0, 0.8fr) minmax(560px, 1.2fr);
+
         align-items: center;
-        gap: 72px;
+        gap: 48px;
     }
 
     .hero__title {
         font-size: 70px;
-    }
-
-    .video-placeholder {
-        min-height: 430px;
     }
 }
 
